@@ -10,10 +10,6 @@ class Post
     @@all
   end 
   
-  def author 
-    self.author = Author.new(name)
-  end 
-  
   def author_name
     if self.author == nil 
       nil
