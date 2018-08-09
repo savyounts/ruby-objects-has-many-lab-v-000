@@ -15,18 +15,18 @@ class Author
   end 
   
   def posts 
-    @posts.size 
+    @posts 
   end 
   
   def add_post_by_title(title)
     article = Post.new(title)
     @posts << article 
     @@all_posts << article
-    article.author = self.name  
+    article.author = self
     article 
   end
   
   def post_count
-    @@all_posts
+    @@all_posts.size
   end
 end
