@@ -7,11 +7,11 @@ class Author
     @posts = []
   end 
   
-  def add_post(post)
-    @posts << post
-    @@all_posts << post
-    post.author = self 
-    post
+  def add_post(article)
+    @posts << article
+    @@all_posts << article
+    article.author = self 
+    article
   end 
   
   def posts 
@@ -19,11 +19,11 @@ class Author
   end 
   
   def add_post_by_title(title)
-    post = Post.new(title)
-    @posts << post 
-    @@all_posts << post
-    post.author = self.name  
-    post 
+    article = Post.new(title)
+    @posts << article 
+    @@all_posts << article
+    article.author = self.name  
+    article 
   end
   
   def post_count
